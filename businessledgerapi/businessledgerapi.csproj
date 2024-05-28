@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.18" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Domain\" />
+    <None Remove="Data\" />
+    <None Remove="Data\Unit\" />
+    <None Remove="Domain\Unit\" />
+    <None Remove="Data\Unit\Dtos\" />
+    <None Remove="Data\Unit\Repository\" />
+    <None Remove="Data\Unit\Model\" />
+    <None Remove="Controllers\" />
+    <None Remove="Domain\Business\" />
+    <None Remove="Data\Account\" />
+    <None Remove="Data\Database\" />
+    <None Remove="Data\Account\Dtos\" />
+    <None Remove="Data\Business\" />
+    <None Remove="Data\Business\Dtos\" />
+    <None Remove="Data\Business\Model\" />
+    <None Remove="Data\Business\Repository\" />
+    <None Remove="Data\Account\Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\Unit\" />
+    <Folder Include="Domain\Unit\" />
+    <Folder Include="Data\Unit\Dtos\" />
+    <Folder Include="Data\Unit\Repository\" />
+    <Folder Include="Data\Unit\Model\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Domain\Business\" />
+    <Folder Include="Data\Account\" />
+    <Folder Include="Data\Database\" />
+    <Folder Include="Data\Account\Dtos\" />
+    <Folder Include="Data\Business\" />
+    <Folder Include="Data\Business\Dtos\" />
+    <Folder Include="Data\Business\Model\" />
+    <Folder Include="Data\Business\Repository\" />
+    <Folder Include="Data\Account\Model\" />
+  </ItemGroup>
+</Project>
